@@ -149,6 +149,8 @@ class PyControllerWindow(QMainWindow):
         servo_dial = QDial()
         servo_dial.setMinimum(0)
         servo_dial.setMaximum(180)
+        servo_dial.setNotchesVisible(True) 
+        servo_dial.setOrientation(Qt.Orientation.Horizontal) 
         servo_dial.valueChanged.connect(self.handle_servo_position_change)
 
         servo_layout.addWidget(servo_label)
